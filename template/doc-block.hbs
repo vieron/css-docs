@@ -1,0 +1,75 @@
+<div class="cssd-DocBlock">
+
+    <h2 class="cssd-DocBlock-title">{{title}}</h2>
+
+    <a class="cssd-DocBlock-cssLink" href="file://{{absoluteFilePath}}" target="_blank">View original file</a>
+
+
+    {{#if depends_html}}
+        <div class="cssd-DocBlock-depends">
+            <strong>Depends</strong>
+            {{{ depends_html }}}
+        </div>
+    {{/if}}
+
+    {{#if extends_html}}
+        <div class="cssd-DocBlock-extends">
+            <strong>Extends</strong>
+            {{{ extends_html }}}
+        </div>
+    {{/if}}
+
+    {{#if description}}
+        <div class="cssd-DocBlock-description">
+            {{{ description }}}
+        </div>
+    {{/if}}
+
+    {{#if markup_highlighted}}
+        <h3 class="cssd-DocBlock-subtitle">Markup</h3>
+        <div class="cssd-DocBlock-markup">
+            <pre class="hljs"><code>{{{ markup_highlighted }}}</code></pre>
+        </div>
+    {{/if}}
+
+    {{#if markup}}
+        <h3 class="cssd-DocBlock-subtitle">Preview</h3>
+        <div class="cssd-DocBlock-render">
+            {{{ markup }}}
+        </div>
+    {{/if}}
+
+    {{#if state}}
+        <h4 class="cssd-DocBlock-subtitle">States</h4>
+        <ul class="cssd-DocBlock-states">
+        {{#each state}}
+            <li>
+                {{ name }} {{#if description}}- {{ description }} {{/if}}
+
+                {{#if ../markup}}
+                    <div class="cssd-DocBlock-render">
+                    {{> markup }}
+                    </div>
+                {{/if}}
+            </li>
+        {{/each}}
+        </ul>
+    {{/if}}
+
+    {{#if modifier}}
+        <h4 class="cssd-DocBlock-subtitle">Modifiers</h4>
+        <ul class="cssd-DocBlock-modifier">
+        {{#each modifier}}
+            <li>
+                {{ name }} {{#if description}}- {{ description }} {{/if}}
+                {{#if ../markup}}
+                    <div class="cssd-DocBlock-render">
+                    {{> markup }}
+                    </div>
+                {{/if}}
+            </li>
+        {{/each}}
+        </ul>
+    {{/if}}
+
+</div>

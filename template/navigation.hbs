@@ -1,0 +1,13 @@
+<ul>
+    {{#each links}}
+        <li {{#if isCurrent}}class="js-isActive"{{/if}}>
+            {{#if pageExists}}
+                <a href="{{href}}">{{title}}</a>
+            {{else}}
+                <span>{{title}}</span>
+            {{/if}}
+
+            {{{childs}}}
+        </li>
+    {{/each}}
+</ul>

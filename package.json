@@ -1,0 +1,36 @@
+{
+  "name": "css-docs",
+  "version": "0.0.0",
+  "description": "CSS documentation generator tool",
+  "main": "lib/css-docs.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vieron/css-docs.git"
+  },
+  "keywords": [
+    "css",
+    "docs",
+    "generator"
+  ],
+  "author": "vieron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vieron/css-docs/issues"
+  },
+  "homepage": "https://github.com/vieron/css-docs",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "scrawl": "git+https://github.com/vieron/scrawl.git",
+    "underscore.string": "^2.3.3",
+    "multimatch": "^0.2.0",
+    "dotaccess": "^1.0.4",
+    "fs-extra": "^0.9.1",
+    "handlebars": "^2.0.0-alpha.4",
+    "stylus": "^0.45.1",
+    "marked": "git+https://github.com/chester1000/marked.git",
+    "highlight.js": "^8.0.0"
+  }
+}

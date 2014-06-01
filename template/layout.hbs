@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{title}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="{{relativePath}}assets/css-docs/css/css-docs.css">
+
+        <!-- The css you are documenting -->
+        <link rel="stylesheet" href="{{relativePath}}assets/css/built.css">
+    </head>
+    <body>
+
+        <div class="cssd-App">
+            <div class="cssd-App-sidebar">
+                <header class="cssd-App-header">
+                    {{#if title}}
+                        <h1><a href="{{relativePath}}" class="cssd-Logo">{{ title }}</a></h1>
+                    {{/if}}
+
+                    {{#if logo}}
+                        <a href="{{relativePath}}" class="cssd-Logo">
+                            <img src="{{logo}}">
+                        </a>
+                    {{/if}}
+                </header>
+
+                {{{ nav }}}
+            </div>
+
+            <div class="cssd-App-content">
+
+                <div class="cssd-Breadcrumbs">
+                    {{{ breadcrumbs }}}
+                </div>
+
+                <div class="cssd-Doc">
+                    {{{ body }}}
+                </div>
+            </div>
+
+        </div>
+
+        <script>window.jQuery || document.write('<script src="{{relativePath}}assets/css-docs/js/vendor/jquery.min.js"><\/script>')</script>
+        <script>window.jQuery.fn.waypoint || document.write('<script src="{{relativePath}}assets/css-docs/js/vendor/jquery.waypoint.min.js"><\/script>')</script>
+    </body>
+</html>

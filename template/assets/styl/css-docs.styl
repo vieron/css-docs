@@ -1,0 +1,167 @@
+// see http://highlightjs.org/static/test.html
+@import "../css/vendor/code-themes/github.css"
+
+
+default-style(font-size = 16px)
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-size: font-size !important;
+    color: #333 !important;
+
+box-sizing(box-sizing = border-box)
+    -webkit-box-sizing: box-sizing;
+    -moz-box-sizing: box-sizing;
+    box-sizing: box-sizing;
+
+
+
+body
+  margin: 0 !important
+  padding: 0 !important
+  background-color: #FFF !important;
+
+
+.cssd-App
+    min-height: 100vh
+    overflow: hidden
+
+
+.cssd-App-header
+    default-style()
+    width: 100%
+    background-color: #FFF;
+    color: #333;
+    padding: 0 16px
+
+    h1
+        font-size: 20px;
+        margin: 0 0 20px 0
+        color: #34495e;
+
+
+.cssd-App-sidebar,
+.cssd-App-content {
+    padding-top: 20px;
+}
+
+
+.cssd-App-sidebar
+    default-style(14px)
+    float: left
+    width: 20%
+    max-width: 400px
+
+    > ul
+        margin-right: 20px !important
+        > li >
+            span, a
+                font-size: 16px;
+                font-weight: bold;
+
+
+    ul
+        list-style: none
+        padding: 0
+        margin: 0
+
+        ul
+            margin-left: 16px
+            border-left: 1px solid #DDD
+
+        a, span
+            display: block
+            padding: 10px 16px
+            color: #3498db;
+
+        .js-isActive > a
+            background-color: #DDD
+            color: #777
+            text-decoration: none
+
+
+.cssd-App-content
+    display: block
+    margin-left: 20%
+
+
+
+.cssd-Breadcrumbs
+    default-style()
+
+
+.cssd-Doc {
+    padding-bottom: 40vh;
+}
+
+.cssd-DocBlock
+    margin-right: 20px
+    position: relative
+
+.cssd-DocBlock-cssLink
+    default-style(12px)
+    position: absolute
+    right: 0
+    top: 0
+
+.cssd-DocBlock-title
+    default-style(22px)
+    margin: 32px 0 20px !important
+
+.cssd-DocBlock-subtitle
+    margin: 1.8em 0 1.2em !important
+
+h3.cssd-DocBlock-subtitle
+    default-style(22px)
+
+h4.cssd-DocBlock-subtitle
+    default-style(18px)
+
+h5.cssd-DocBlock-subtitle
+    default-style(16px)
+
+
+.cssd-DocBlock-description
+    default-style()
+    margin-top: 40px;
+
+.cssd-DocBlock-states,
+.cssd-DocBlock-modifier
+    list-style: none
+
+.cssd-DocBlock-depends,
+.cssd-DocBlock-extends
+    default-style(14px)
+    list-style: none
+    margin-bottom: 6px;
+
+    strong, ul, li
+        display: inline-block
+        vertical-align: middle
+
+
+.cssd-DocBlock-render
+    padding: 20px !important
+
+
+// highlight.js
+.cssd-DocBlock,
+.cssd-DocBlock-markup
+    .hljs
+        font-size: 14px
+
+    .hljs, code
+        box-sizing()
+        font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace
+
+
+.cssd-DocBlock-description
+.cssd-DocBlock-markup
+    > .hljs
+        width: 100%
+        display: block
+
+
+
+
+
+
+
