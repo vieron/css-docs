@@ -15,6 +15,11 @@ css-docs is **TOTALLY AWORK IN PROGRESS** but you can see the [demo here](http:/
     - Use @whateveryouwant directive and will be exposed to the template
 
 
+## Usage
+
+See `example/css-docs.js`
+
+
 ## Doc block variables (for templating)
 
 - title (first line of description)
