@@ -2,6 +2,8 @@
 
 CSS Styleguide Generator focused on CSS Modular Architectures and written in Javascript.
 
+css-docs is **TOTALLY AWORK IN PROGRESS** but you can see the [demo here](http://vieron.github.io/css-docs/)
+
 
 ## Features
 
