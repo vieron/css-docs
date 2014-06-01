@@ -77,6 +77,15 @@ css-docs is **TOTALLY AWORK IN PROGRESS** but you can see the [demo here](http:/
 
 ## Development
 
+Checkout the project and go to:
+
+    $ git clone git@github.com:vieron/css-docs.git
+    $ cd css-docs/example
+    $ git clone git@github.com:vieron/css-docs.git docs
+    $ cd docs
+    $ git checkout gh-pages
+
+
 Compile example sass
 
     $ cd example
