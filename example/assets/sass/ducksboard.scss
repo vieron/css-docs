@@ -31,7 +31,9 @@ body, input, textarea, button, fieldset, legend {
  * @modifier .Btn--cancel Lorem ipsum dolor sit amet
  *
  * @markup
+ * {{#repeat '10'}}
  * <a class="Btn {{classes}}"><span>Button</span></a>
+ * {{/repeat}}
  *
  * @markup
  * <button class="Btn {{classes}}"><span>Button</span></button>
