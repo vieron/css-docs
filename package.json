@@ -33,6 +33,7 @@
     "marked": "git+https://github.com/chester1000/marked.git",
     "highlight.js": "^8.0.0",
     "handlebars-helper-repeat": "^0.2.0",
-    "js-beautify": "^1.5.1"
+    "js-beautify": "^1.5.1",
+    "glob": "^4.0.2"
   }
 }
