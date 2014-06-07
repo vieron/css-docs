@@ -111,17 +111,17 @@ Or if you are using [Grunt](http://gruntjs.com), there is a css-docs grunt plugi
 
 ## Options
 
-| Name               | Type               | Default                                       | Description
-|:-------------      |:-------------      |:-----                                         |:---------------
-| title              | String             | 'css-docs'                                    | Title used in the generated Docs
-| logo               | String/Boolean     | false                                         | If it's a String is used as src attribute of an image tag. It replaces title.
-| docsPath           | String             | 'docs/'                                       | Path where generated Docs are placed
-| docsAssetsPath     | String             | 'docs/assets/css-docs/'                       | Path where theme assets are copied to use in generated Docs
-| styleDir           | String             | 'assets/sass/'                                | Path where your project CSS/sass/less files are located.
-| styleFileExt       | Array              | ['.scss', '.css', '.sass', '.styl', '.less']  | Valid file extensions to search for comments. Used by `styleDir`.
-| ignore             | Array              | ['**/bourbon/**']                             | Ignore files to be parsed. Uses [multimatch](https://github.com/sindresorhus/multimatch)
-| builtAssetsDir     | String             | 'assets/'                                     | Your project assets (images, fonts, javascripts). That are copied to `docsPath + '/assets'`.
-| builtCSSPath       | String             | 'css/built.css'                               | Path to the compiled, concatenated, mininified... CSS. Relative to `builtAssetsDir`.
+| Name                 | Type               | Default                                         | Description
+|:-------------        |:-------------      |:-----                                           |:---------------
+| **title**            | `String`           | `'css-docs'`                                    | Title used in the generated Docs
+| **logo**             | `String/Boolean`   | `false`                                         | If it's a String is used as src attribute of an image tag. It replaces title.
+| **docsPath**         | `String`           | `'docs/'`                                       | Path where generated Docs are placed
+| **docsAssetsPath**   | `String`           | `'docs/assets/css-docs/'`                       | Path where theme assets are copied to use in generated Docs
+| **styleDir**         | `String`           | `'assets/sass/'`                                | Path where your project CSS/sass/less files are located.
+| **styleFileExt**     | `Array`            | `['.scss', '.css', '.sass', '.styl', '.less']`  | Valid file extensions to search for comments. Used by `styleDir`.
+| **ignore**           | `Array`            | `['**/bourbon/**']`                             | Ignore files to be parsed. Uses [multimatch](https://github.com/sindresorhus/multimatch)
+| **builtAssetsDir**   | `String`           | `'assets/'`                                     | Your project assets (images, fonts, javascripts). That are copied to `docsPath + '/assets'`.
+| **builtCSSPath**     | `String`           | `'css/built.css'`                               | Path to the compiled, concatenated, mininified... CSS. Relative to `builtAssetsDir`.
 
 
 ## Doc block variables (for templating)
