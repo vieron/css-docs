@@ -1,0 +1,160 @@
+@import "../css/vendor/code-themes/github.css";
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #fff !important;
+}
+.cssd-App {
+  min-height: 100vh;
+  overflow: hidden;
+}
+.cssd-App-header {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  color: #333 !important;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  padding: 0 16px;
+}
+.cssd-App-header h1 {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+  color: #34495e;
+}
+.cssd-App-sidebar,
+.cssd-App-content {
+  padding-top: 20px;
+}
+.cssd-App-sidebar {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: #333 !important;
+  float: left;
+  width: 20%;
+  max-width: 400px;
+}
+.cssd-App-sidebar > ul {
+  margin-right: 20px !important;
+}
+.cssd-App-sidebar > ul > li > span,
+.cssd-App-sidebar > ul > li > a {
+  font-size: 16px;
+  font-weight: bold;
+}
+.cssd-App-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cssd-App-sidebar ul ul {
+  margin-left: 16px;
+  border-left: 1px solid #ddd;
+}
+.cssd-App-sidebar ul a,
+.cssd-App-sidebar ul span {
+  display: block;
+  padding: 10px 16px;
+  color: #3498db;
+}
+.cssd-App-sidebar ul .js-isActive > a {
+  background-color: #ddd;
+  color: #777;
+  text-decoration: none;
+}
+.cssd-App-content {
+  display: block;
+  margin-left: 20%;
+}
+.cssd-Breadcrumbs {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  color: #333 !important;
+}
+.cssd-Doc {
+  padding-bottom: 40vh;
+}
+.cssd-DocBlock {
+  margin-right: 20px;
+  position: relative;
+}
+.cssd-DocBlock-cssLink {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+  color: #333 !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.cssd-DocBlock-title {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 22px !important;
+  color: #333 !important;
+  margin: 32px 0 20px !important;
+}
+.cssd-DocBlock-subtitle {
+  margin: 1.8em 0 1.2em !important;
+}
+h3.cssd-DocBlock-subtitle {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 22px !important;
+  color: #333 !important;
+}
+h4.cssd-DocBlock-subtitle {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 18px !important;
+  color: #333 !important;
+}
+h5.cssd-DocBlock-subtitle {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  color: #333 !important;
+}
+.cssd-DocBlock-description {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  color: #333 !important;
+  margin-top: 40px;
+}
+.cssd-DocBlock-states,
+.cssd-DocBlock-modifier {
+  list-style: none;
+}
+.cssd-DocBlock-depends,
+.cssd-DocBlock-extends {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: #333 !important;
+  list-style: none;
+  margin-bottom: 6px;
+}
+.cssd-DocBlock-depends strong,
+.cssd-DocBlock-extends strong,
+.cssd-DocBlock-depends ul,
+.cssd-DocBlock-extends ul,
+.cssd-DocBlock-depends li,
+.cssd-DocBlock-extends li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.cssd-DocBlock-render {
+  padding: 20px !important;
+}
+.cssd-DocBlock .hljs,
+.cssd-DocBlock-markup .hljs {
+  font-size: 14px;
+}
+.cssd-DocBlock .hljs,
+.cssd-DocBlock-markup .hljs,
+.cssd-DocBlock code,
+.cssd-DocBlock-markup code {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+.cssd-DocBlock-description > .hljs,
+.cssd-DocBlock-markup > .hljs {
+  width: 100%;
+  display: block;
+}
