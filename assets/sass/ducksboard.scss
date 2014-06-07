@@ -44,9 +44,6 @@ body, input, textarea, button, fieldset, legend {
  * @markup
  * <a class="Btn {{classes}}"><span>Button</span></a>
  *
- * @markup
- * <button class="Btn {{classes}}"><span>Button</span></button>
- *
  * @styleguide components.button
  */
 
@@ -191,7 +188,7 @@ body, input, textarea, button, fieldset, legend {
  *
  * @markup
  * <div class="BtnGroup {{classes}}">
- *     {{#repeat 10}} {{use 'components.button'}} {{/repeat}}
+ *     {{#repeat 4}} {{use 'components.button'}} {{/repeat}}
  * </div>
  *
  * @styleguide components.buttonGroup
