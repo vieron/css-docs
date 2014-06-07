@@ -1,215 +1,27 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased; }
-
-body, input, textarea, button, fieldset, legend {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: normal; }
-
-/**
- * Components
- *
- * Lorem ipsum Amet adipisicing aliqua labore irure in ut culpa pariatur pariatur
- * minim ut commodo in ullamco proident est aliqua enim velit irure consequat
- * nostrud qui magna esse laborum reprehenderit nisi eiusmod aute dolor ut
- * reprehenderit sit in ut sunt sint.
- *
- * @styleguide components
- */
-/**
- * Button
- *
- * Lorem ipsum Amet adipisicing aliqua labore irure in ut culpa pariatur pariatur
- * minim ut commodo in ullamco proident est aliqua enim velit irure consequat
- * nostrud qui magna esse laborum reprehenderit nisi eiusmod aute dolor ut
- * reprehenderit sit in ut sunt sint.
- *
- * @state :hover
- * @state :active
- * @state .js-isActive Lorem ipsum dolor sit amet
- * @state .js-isLoading Lorem ipsum dolor sit amet
- *
- * @modifier .Btn--success Lorem ipsum dolor sit amet
- * @modifier .Btn--cancel Lorem ipsum dolor sit amet
- *
- * @markup
- * <a class="Btn {{classes}}"><span>Button</span></a>
- *
- * @styleguide components.button
- */
-.Btn {
-  display: inline-block;
-  border: none;
-  border-radius: 3px;
-  background-color: #DDD;
-  overflow: hidden;
-  color: #999;
-  padding: 0.2em 1em 0.4em;
-  cursor: pointer;
-  outline: 0px;
-  line-height: 1.6em;
-  vertical-align: middle;
-  font-size: 16px; }
-  .Btn > * {
-    display: inline-block;
-    vertical-align: middle !important;
-    line-height: 1; }
-  .Btn:hover, .Btn.js-isLoading {
-    background-color: blue;
-    color: #FFF; }
-  .Btn:active, .Btn.js-isActive {
-    background-color: #6666ff;
-    color: #FFF;
-    position: relative;
-    top: 1px; }
-  .Btn.js-isLoading {
-    cursor: no-drop;
-    opacity: 0.2; }
-    .Btn.js-isLoading span {
-      opacity: 0; }
-
-.Btn--success {
-  background-color: green;
-  color: #FFF; }
-  .Btn--success:hover {
-    background-color: #00a900; }
-
-.Btn--cancel {
-  background-color: red;
-  color: #FFF; }
-  .Btn--cancel:hover {
-    background-color: #ff4747; }
-
-/**
- * Button with icon
- *
- * Lorem ipsum **dolor** sit amet [asd](http://google.es)
- *
- * @extends components.button
- *
- * @depends components.button
- * @depends components.icon
- *
- * @markup
- * <!-- wadus comment -->
- * <a class="Btn {{classes}}">
- *     {{use 'components.icon Ico-gear'}}
- *      <span>Button</span>
- * </a>
- * <!-- wadus comment -->
- * <button class="Btn {{classes}}">
- *     {{use 'components.icon Ico-edit'}}
- *      <span>Button</span>
- * </button>
- *
- * @styleguide components.button.icon
- */
-/**
- * Icon
- *
- * Lorem ipsum **dolor** sit amet [asd](http://google.es)
- *
- * @modifier .Ico-gear
- * @modifier .Ico-edit
- * @modifier .Ico-user
- * @modifier .Ico-delete
- *
- * @markup
- * <i class="Ico {{classes}}"></i>
- *
- * @styleguide components.icon
- */
-.Ico {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  background: #DDD; }
-
-.Ico-gear, .Ico-edit, .Ico-user, .Ico-delete {
-  background: #333; }
-
-/**
- * Button Group
- *
- * Lorem ipsum **dolor** sit amet [asd](http://google.es)
- *
- * @state .js-isFixed Lorem ipsum dolor sit amet
- *
- * @modifier .BtnGroup--compact Lorem ipsum dolor sit amet
- *
- * @depends components.button
- *
- * @markup
- * <div class="BtnGroup {{classes}}">
- *     {{#repeat 4}} {{use 'components.button'}} {{/repeat}}
- * </div>
- *
- * @styleguide components.buttonGroup
- */
-.BtnGroup {
-  display: inline-block;
-  font-size: 0;
-  vertical-align: middle; }
-  .BtnGroup .Btn {
-    margin-right: 10px; }
-    .BtnGroup .Btn:last-child {
-      margin: 0; }
-
-.BtnGroup--compact .Btn {
-  margin-right: 0;
-  border-radius: 0;
-  border-left: 1px solid rgba(0, 0, 0, 0.2); }
-  .BtnGroup--compact .Btn:first-child {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-left: none; }
-  .BtnGroup--compact .Btn:last-child {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px; }
-
-/**
- * Typography
- *
- * Lorem ipsum dolor sit amet
- *
- *
- * @depends components.button
- * @depends components.icon
- *
- * @markup
- * <a class="button {{classes}}">Send!</a>
- *
- * @styleguide typography
- */
-body {
-  background: red; }
-
-/**
- * Headings
- *
- * Lorem ipsum dolor sit amet
- *
- * @depends components.button
- * @depends components.icon
- *
- * @markup
- * <a class="button {{classes}}">Send!</a>
- *
- * @styleguide typography.headings
- */
-/**
- * Links
- *
- * Lorem ipsum **dolor** sit amet [asd](http://google.es)
- *
- *
- * @depends components.button
- * @depends components.icon
- *
- * @markup
- * <a class="button {{classes}}">Send!</a>
- *
- * @styleguide typography.headings.links
- */
+.Btn--cancel.pseudo-class-hover {background-color: #ff4747;}
+.Btn--success.pseudo-class-hover {background-color: #00a900;}
+.Btn.pseudo-class-active {background-color: blue; border: 2px solid black;}
+.Btn.pseudo-class-active, .Btn.js-isActive {background-color: #6666ff; color: #FFF; position: relative; top: 1px;}
+.Btn.pseudo-class-hover, .Btn.js-isLoading {background-color: blue; color: #FFF;}
+* {margin: 0; padding: 0; -webkit-font-smoothing: antialiased;}
+body, input, textarea, button, fieldset, legend {font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; font-weight: normal;}
+.Btn {display: inline-block; border: none; border-radius: 3px; background-color: #DDD; overflow: hidden; color: #999; padding: 0.2em 1em 0.4em; cursor: pointer; outline: 0px; line-height: 1.6em; vertical-align: middle; font-size: 16px;}
+.Btn > * {display: inline-block; vertical-align: middle !important; line-height: 1;}
+.Btn:hover, .Btn.js-isLoading {background-color: blue; color: #FFF;}
+.Btn:active, .Btn.js-isActive {background-color: #6666ff; color: #FFF; position: relative; top: 1px;}
+.Btn.js-isLoading {cursor: no-drop; opacity: 0.2;}
+.Btn.js-isLoading span {opacity: 0;}
+.Btn:active {background-color: blue; border: 2px solid black;}
+.Btn--success {background-color: green; color: #FFF;}
+.Btn--success:hover {background-color: #00a900;}
+.Btn--cancel {background-color: red; color: #FFF;}
+.Btn--cancel:hover {background-color: #ff4747;}
+.Ico {display: inline-block; width: 1em; height: 1em; background: #DDD;}
+.Ico-gear, .Ico-edit, .Ico-user, .Ico-delete {background: #333;}
+.BtnGroup {display: inline-block; font-size: 0; vertical-align: middle;}
+.BtnGroup .Btn {margin-right: 10px;}
+.BtnGroup .Btn:last-child {margin: 0;}
+.BtnGroup--compact .Btn {margin-right: 0; border-radius: 0; border-left: 1px solid rgba(0, 0, 0, 0.2);}
+.BtnGroup--compact .Btn:first-child {border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-left: none;}
+.BtnGroup--compact .Btn:last-child {border-top-right-radius: 3px; border-bottom-right-radius: 3px;}
+body {background: red;}
