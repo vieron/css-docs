@@ -13,7 +13,7 @@ body, input, textarea, button, fieldset, legend {
     font-weight: normal;
 }
 
-/**
+/*
  * Components
  *
  * Lorem ipsum Amet adipisicing aliqua labore irure in ut culpa pariatur pariatur
@@ -89,6 +89,11 @@ body, input, textarea, button, fieldset, legend {
         span {
             opacity: 0;
         }
+    }
+
+    &:active {
+        background-color: blue;
+        border: 2px solid black;
     }
 }
 
