@@ -2,23 +2,111 @@
 
 CSS Styleguide Generator focused on CSS Modular Architectures and written in Javascript.
 
-css-docs is **TOTALLY AWORK IN PROGRESS** but you can see the [demo here](http://vieron.github.io/css-docs/)
+css-docs is a **WORK IN PROGRESS** but you can see a [demo here](http://vieron.github.io/css-docs/)
 
 
 ## Features
 
-- Focused on CSS Modular Architectures
+- Dynamic @directives
+- @state and @modifier directives
+- @extends and @depends directives
 - Supports Custom templates
+- Focused on Modular CSS Architectures
+- Use Markdown in descriptions
+- Write less markup using Handlebars helpers
+- Give some hierarchy to your CSS using dot paths
+- One single HTML page for each component
 - Works with any CSS-preprocessing language or with CSS directly
-- Easily extendible
-    - Custom translators for each @directive
-    - Use @whateveryouwant directive and will be exposed to the template
+- Easily extendible. Custom translators for each @directive.
+
+
+## Installation
+
+    $ npm install css-docs
 
 
 ## Usage
 
-See `example/css-docs.js`
+**css-docs** is a node package, you can write a small `.js` file and run it from
+the command line. See [example/css-docs.js](example/css-docs.js)
 
+Or if you are using [Grunt](http://gruntjs.com), there is a css-docs grunt plugin
+[here](https://github.com/vieron/grunt-css-docs).
+
+
+## Example
+
+
+```css
+/**
+ * Icon
+ * Lorem ipsum Non do id tempor laboris do ut veniam in sint fugiat fugiat
+ * adipisicing elit Excepteur.
+ *
+ * @modifier .Ico-edit Lorem ipsum dolor sit amet
+ * @modifier .Ico-settings Lorem ipsum dolor sit amet
+ *
+ * @markup
+ * <i class="Ico {{classes}}"></i>
+ *
+ * @styleguide components.icon
+ */
+```
+
+```css
+/**
+ * Button
+ * Lorem ipsum Non do id tempor laboris do ut veniam in sint fugiat fugiat
+ * adipisicing elit Excepteur.
+ *
+ * @state :hover
+ * @state .js-isDisabled Lorem ipsum dolor sit amet
+ *
+ * @modifier .btn--success Lorem ipsum dolor sit amet
+ * @modifier .btn--cancel Lorem ipsum dolor sit amet
+ *
+ * @depends component.icon
+ * @depends component.foo
+ *
+ * @extends component.link
+ *
+ * @markup
+ * <a class="button {{classes}}">Button</a>
+ *
+ * @markup
+ * <button class="button {{classes}}">Button</button>
+ *
+ * @markup
+ * <a class="button {{classes}}">
+ *     {{use 'components.icon Ico--edit'}}
+ *     <span>Button</span>
+ * </a>
+ *
+ * @styleguide components.button
+ */
+ ```
+
+ ```css
+ /**
+  * Button Group
+  * Lorem ipsum Non do id tempor laboris do ut veniam in sint fugiat fugiat
+  * adipisicing elit Excepteur.
+  *
+  * @modifier .BtnGroup--compact Lorem ipsum dolor sit amet
+  * @modifier .BtnGroup--fullWidth Lorem ipsum dolor sit amet
+  *
+  * @depends component.button
+  *
+  * @markup
+  * <div class="BtnGroup {{classes}}">
+  *     {{#repeat 4}}
+  *         {{use 'components.button'}}
+  *     {{/repeat}}
+  * </div>
+  *
+  * @styleguide components.buttonGroup
+  */
+```
 
 ## Doc block variables (for templating)
 
@@ -48,38 +136,6 @@ See `example/css-docs.js`
 - treePath (components.childs.button)
 
 
-
-## Spec
-
-
-```css
-/**
- * Button
- * Lorem ipsum Non do id tempor laboris do ut veniam in sint fugiat fugiat
- * adipisicing elit Excepteur.
- *
- * @state :hover
- * @state .js-isActive Lorem ipsum dolor sit amet
- *
- * @modifier .btn--success Lorem ipsum dolor sit amet
- * @modifier .btn--cancel Lorem ipsum dolor sit amet
- *
- * @depends component.icon
- * @depends component.foo
- *
- * @extends component.link
- *
- * @markup
- * <a class="button {{classes}}">Button</a>
- *
- * @markup
- * <button class="button {{classes}}">Button</button>
- *
- * @styleguide components.button
- */
-```
-
-
 ## Development
 
 Checkout the project and go to:
@@ -101,10 +157,11 @@ Generate docs
     $ node css-docs.js
 
 
-
 ## TO-DO
 
 * breadcrumbs, remove link in no generated pages
+* @index directive to render TOC
+* option to generate a JSON representation instead of generate HTML docs
 * copy code snippet (zeroclipboard)
 * refactor
-* grunt plugin
+
