@@ -13,6 +13,17 @@ body, input, textarea, button, fieldset, legend {
     font-weight: normal;
 }
 
+/**
+ * Components
+ *
+ * Lorem ipsum Amet adipisicing aliqua labore irure in ut culpa pariatur pariatur
+ * minim ut commodo in ullamco proident est aliqua enim velit irure consequat
+ * nostrud qui magna esse laborum reprehenderit nisi eiusmod aute dolor ut
+ * reprehenderit sit in ut sunt sint.
+ *
+ * @styleguide components
+ */
+
 
 /**
  * Button
@@ -31,9 +42,7 @@ body, input, textarea, button, fieldset, legend {
  * @modifier .Btn--cancel Lorem ipsum dolor sit amet
  *
  * @markup
- * {{#repeat '10'}}
  * <a class="Btn {{classes}}"><span>Button</span></a>
- * {{/repeat}}
  *
  * @markup
  * <button class="Btn {{classes}}"><span>Button</span></button>
@@ -120,12 +129,12 @@ body, input, textarea, button, fieldset, legend {
  * @markup
  * <!-- wadus comment -->
  * <a class="Btn {{classes}}">
- *      <i class="Ico Ico-gear"></i>
+ *     {{use 'components.icon Ico-gear'}}
  *      <span>Button</span>
  * </a>
  * <!-- wadus comment -->
  * <button class="Btn {{classes}}">
- *      <i class="Ico Ico-gear"></i>
+ *     {{use 'components.icon Ico-edit'}}
  *      <span>Button</span>
  * </button>
  *
@@ -182,8 +191,8 @@ body, input, textarea, button, fieldset, legend {
  *
  * @markup
  * <div class="BtnGroup {{classes}}">
- *     <a class="Btn">Button</a>
- *     <a class="Btn">Button</a>
+ *     {{use 'components.button'}}
+ *     {{use 'components.button'}}
  * </div>
  *
  * @styleguide components.buttonGroup
