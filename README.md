@@ -175,7 +175,7 @@ Generate docs
 
 ## TO-DO
 
-* breadcrumbs, remove link in no generated pages
+* custom templates
 * @index directive to render TOC
 * option to generate a JSON representation instead of generate HTML docs
 * copy code snippet (zeroclipboard)
