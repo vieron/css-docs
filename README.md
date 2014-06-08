@@ -178,6 +178,7 @@ Generate docs
 * refactor
 * error reporting
 * write tests
+* @experimental and @deprecated directive
 * @index directive to render TOC
 * option to generate a JSON representation instead of generate HTML docs
 * copy code snippet (zeroclipboard)
