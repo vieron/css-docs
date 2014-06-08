@@ -1,145 +1,258 @@
 // see http://highlightjs.org/static/test.html
-@import "../css/vendor/code-themes/github.css"
+@import "vendor/code-themes/github"
 
 
-default-style(font-size = 16px)
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-    font-size: font-size !important;
-    color: #333 !important;
+default-style(font-size = 16px, color = #333)
+    font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: font-size;
+    color: color;
+
+mono-style(font-size = 16px)
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace
+    font-size: font-size;
 
 box-sizing(box-sizing = border-box)
     -webkit-box-sizing: box-sizing;
     -moz-box-sizing: box-sizing;
     box-sizing: box-sizing;
 
+link()
+    color: #4A90E2
+    text-decoration: none
+    font-weight: 400
 
 
 body
-  margin: 0 !important
-  padding: 0 !important
-  background-color: #FFF !important;
+  margin: 0
+  padding: 0
+  background-color: #FFF;
 
 
 .cssd-App
     min-height: 100vh
     overflow: hidden
+    position: relative
 
 
 .cssd-App-header
     default-style()
-    width: 100%
-    background-color: #FFF;
-    color: #333;
-    padding: 0 16px
+    display: block
+    background-color: #323A44
+    color: #333
+    padding: 20px 16px
 
-    h1
-        font-size: 20px;
-        margin: 0 0 20px 0
-        color: #34495e;
+    h1, a
+        font-size: 20px
+        color: #FFF
+        text-decoration: none
 
-
-.cssd-App-sidebar,
-.cssd-App-content {
-    padding-top: 20px;
-}
-
-
-.cssd-App-sidebar
-    default-style(14px)
-    float: left
-    width: 20%
-    max-width: 400px
-
-    > ul
-        margin-right: 20px !important
-        > li >
-            span, a
-                font-size: 16px;
-                font-weight: bold;
-
-
-    ul
-        list-style: none
-        padding: 0
-        margin: 0
-
-        ul
-            margin-left: 16px
-            border-left: 1px solid #DDD
-
-        a, span
-            display: block
-            padding: 10px 16px
-            color: #3498db;
-
-        .js-isActive > a
-            background-color: #DDD
-            color: #777
-            text-decoration: none
 
 
 .cssd-App-content
     display: block
     margin-left: 20%
+    background-color: #F7F7F7;
+    padding-left: 30px
+    position: relative;
+    border-top: 1px solid transparent
+    min-height: 100vh
+
+
+.cssd-App-sidebar
+    default-style(14px)
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 20%
+    max-width: 400px
+    background-color: #3E4752
+
+    ul
+        list-style: none
+
+        a, span
+            default-style(14px, rgba(255, 255, 255, 0.5))
+            display: block
+            padding-top: 8px
+            padding-left: 16px
+            margin-bottom: 10px
+            text-decoration: none
+            line-height: 1
+            font-weight: 600
+
+        a:hover
+            color: rgba(255, 255, 255, 0.8)
+
+        ul
+            position: relative
+            margin-left: 16px
+            border-left: 1px solid rgba(255, 255, 255, 0.5)
+
+            &:after
+                content: ''
+                width: 6px
+                height: 6px
+                border-top: 1px solid rgba(255, 255, 255, 0.5)
+                position: absolute
+                left: -1px
+                bottom: 0
+                background: #3E4752
+
+            &:last-child:after
+                border-top: none;
+
+            li a
+                position: relative
+
+                &:after
+                    content: ''
+                    width: 6px
+                    height: 6px
+                    border-top: 1px solid rgba(255, 255, 255, 0.5)
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    background: #3E4752
+
+    > ul
+        margin: 20px 20px 0 6px
+
+        > li
+            margin-bottom: 30px
+
+            > a, > span
+                text-transform: uppercase
+                default-style(13px, #FFF)
+                padding-bottom: 8px
+
+    .js-isActive
+        > a, > a:hover
+            color: #FFF
+            cursor: default;
+
+
+        // font-weight: bold
+
+
+
 
 
 
 .cssd-Breadcrumbs
-    default-style()
+    position: absolute
+    top: -1px
+    left: 0
+    width: 100%
+    background-color: #FFF
+    padding-left: 0px
+
+    .cssd-separator
+        display: none
+
+    a, span
+        default-style(13px)
+        padding: 12px 30px
+        line-height: 1.1
+        display: inline-block
+        text-decoration: none
+        text-transform: uppercase
+        border-right: 1px solid #E4E4E4
+        border-top-right-radius: 70px
+        border-bottom-right-radius: 70px
+        box-shadow: 5px 0 10px rgba(50, 58, 68, 0.1)
+        color: #3E4752;
+        opacity: 0.6;
+
+    a:hover
+        opacity: 1
+
 
 
 .cssd-Doc {
-    padding-bottom: 40vh;
+    margin-top: 80px
+    margin-right: 40px;
+    margin-left: 10px;
+    padding: 40px 40px 40vh
+    background-color: #FFF
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
 }
 
 .cssd-DocBlock
-    margin-right: 20px
     position: relative
 
 .cssd-DocBlock-cssLink
     default-style(12px)
+    link()
     position: absolute
     right: 0
     top: 0
 
+    + .cssd-DocBlock-depends,
+    + .cssd-DocBlock-extends
+        margin-top: -14px
+
 .cssd-DocBlock-title
-    default-style(22px)
-    margin: 32px 0 20px !important
+    default-style(28px)
+    margin: 0 0 20px
 
 .cssd-DocBlock-subtitle
-    margin: 1.8em 0 1.2em !important
+    margin: 2.8em 0 1.2em
+    text-transform: uppercase
 
-h3.cssd-DocBlock-subtitle
-    default-style(22px)
-
+h3.cssd-DocBlock-subtitle,
 h4.cssd-DocBlock-subtitle
-    default-style(18px)
+    default-style(15px, #323A44)
 
 h5.cssd-DocBlock-subtitle
-    default-style(16px)
+    default-style(14px, #323A44)
 
 
 .cssd-DocBlock-description
     default-style()
-    margin-top: 40px;
+    margin-top: 40p;
+    max-width: 44em
+
+    > p, > pre, > ul, > ol
+        default-style(16px)
+        margin-top: 20px
+        &:first-child
+            margin-top: 0
+
+    > ul, > ol
+        margin-left: 18px
+
+    li
+        margin-bottom: 6px
+
 
 .cssd-DocBlock-states,
 .cssd-DocBlock-modifier
     list-style: none
+    > li
+        margin-bottom: 30px
+
 
 .cssd-DocBlock-depends,
 .cssd-DocBlock-extends
-    default-style(14px)
+    default-style(14px, #999DA2)
     list-style: none
-    margin-bottom: 6px;
+    margin-bottom: 3px;
+
+    > strong
+        font-weight: 600
+        margin-right: 8px
+
 
     strong, ul, li
         display: inline-block
-        vertical-align: middle
+        vertical-align: baseline
 
+    ul li a
+        link()
+        marign-right: 10px
 
-.cssd-DocBlock-render
-    padding: 20px !important
 
 
 // highlight.js
@@ -147,10 +260,11 @@ h5.cssd-DocBlock-subtitle
 .cssd-DocBlock-markup
     .hljs
         font-size: 14px
+        background-color: #FFF;
 
     .hljs, code
         box-sizing()
-        font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace
+        mono-style(14px)
 
 
 .cssd-DocBlock-description
@@ -160,8 +274,39 @@ h5.cssd-DocBlock-subtitle
         display: block
 
 
+.cssd-DocBlock-render,
+.cssd-DocBlock-markup
+    border: 1px dashed #CECECE
+    padding: 20px
+    border-radius: 5px;
 
 
+.cssd-DocBlock-render-header
+    // background-color: #EEE
+    border: 1px dashed #CECECE
+    padding: 10px 20px
+    border-top-right-radius: 4px
+    border-top-left-radius: 4px
+    overflow: hidden
+
+    > code
+        mono-style(15px)
+        float: left
+        width: 200px
+        color: #444
+        font-weight: bold
+        margin-top: 3px
+
+    > p
+        default-style(16px, #999DA2)
+        display: block
+        margin-left: 220px
+
+
+    + .cssd-DocBlock-render
+        border-top-right-radius: 0
+        border-top-left-radius: 0
+        border-top: none
 
 
 

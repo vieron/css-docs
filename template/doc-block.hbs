@@ -7,14 +7,14 @@
 
     {{#if depends_html}}
         <div class="cssd-DocBlock-depends">
-            <strong>Depends</strong>
+            <strong>Depends:</strong>
             {{{ depends_html }}}
         </div>
     {{/if}}
 
     {{#if extends_html}}
         <div class="cssd-DocBlock-extends">
-            <strong>Extends</strong>
+            <strong>Extends:</strong>
             {{{ extends_html }}}
         </div>
     {{/if}}
@@ -25,17 +25,17 @@
         </div>
     {{/if}}
 
-    {{#if markup_highlighted}}
-        <h3 class="cssd-DocBlock-subtitle">Markup</h3>
-        <div class="cssd-DocBlock-markup">
-            <pre class="hljs"><code>{{{ markup_highlighted }}}</code></pre>
-        </div>
-    {{/if}}
-
     {{#if markup}}
         <h3 class="cssd-DocBlock-subtitle">Preview</h3>
         <div class="cssd-DocBlock-render">
             {{{ markup }}}
+        </div>
+    {{/if}}
+
+    {{#if markup_highlighted}}
+        <h3 class="cssd-DocBlock-subtitle">Markup</h3>
+        <div class="cssd-DocBlock-markup">
+            <pre class="hljs"><code>{{{ markup_highlighted }}}</code></pre>
         </div>
     {{/if}}
 
@@ -44,7 +44,10 @@
         <ul class="cssd-DocBlock-states">
         {{#each state}}
             <li>
-                {{ name }} {{#if description}}- {{ description }} {{/if}}
+                <header class="cssd-DocBlock-render-header">
+                    <code>{{ name }}</code>
+                    {{#if description}}<p>{{ description }}</p>{{/if}}
+                </header>
 
                 {{#if ../markup}}
                     <div class="cssd-DocBlock-render">
@@ -61,7 +64,10 @@
         <ul class="cssd-DocBlock-modifier">
         {{#each modifier}}
             <li>
-                {{ name }} {{#if description}}- {{ description }} {{/if}}
+                <header class="cssd-DocBlock-render-header">
+                    <code>{{ name }}</code>
+                    {{#if description}}<p>{{ description }}</p>{{/if}}
+                </header>
                 {{#if ../markup}}
                     <div class="cssd-DocBlock-render">
                     {{> markup }}
