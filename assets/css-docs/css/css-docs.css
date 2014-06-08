@@ -1,132 +1,349 @@
-@import "../css/vendor/code-themes/github.css";
+.hljs {
+  display: inline-block !important;
+  padding: 0.5em !important;
+  color: #333 !important;
+  background: #f8f8f8 !important;
+}
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998 !important;
+  font-style: italic !important;
+}
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333 !important;
+  font-weight: bold !important;
+}
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099 !important;
+}
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #d14 !important;
+}
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900 !important;
+  font-weight: bold !important;
+}
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal !important;
+}
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458 !important;
+  font-weight: bold !important;
+}
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080 !important;
+  font-weight: normal !important;
+}
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080 !important;
+}
+.hljs-regexp {
+  color: #009926 !important;
+}
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073 !important;
+}
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3 !important;
+}
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999 !important;
+  font-weight: bold !important;
+}
+.hljs-deletion {
+  background: #fdd !important;
+}
+.hljs-addition {
+  background: #dfd !important;
+}
+.diff .hljs-change {
+  background: #0086b3 !important;
+}
+.hljs-chunk {
+  color: #aaa !important;
+}
 body {
   margin: 0 !important;
   padding: 0 !important;
   background-color: #fff !important;
 }
 .cssd-App {
-  min-height: 100vh;
-  overflow: hidden;
+  min-height: 100vh !important;
+  overflow: hidden !important;
+  position: relative !important;
 }
 .cssd-App-header {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   font-size: 16px !important;
   color: #333 !important;
-  width: 100%;
-  background-color: #fff;
-  color: #333;
-  padding: 0 16px;
+  display: block !important;
+  background-color: #323a44 !important;
+  color: #333 !important;
+  padding: 20px 16px !important;
 }
-.cssd-App-header h1 {
-  font-size: 20px;
-  margin: 0 0 20px 0;
-  color: #34495e;
+.cssd-App-header h1,
+.cssd-App-header a {
+  font-size: 20px !important;
+  color: #fff !important;
+  text-decoration: none !important;
 }
-.cssd-App-sidebar,
 .cssd-App-content {
-  padding-top: 20px;
+  display: block !important;
+  margin-left: 20% !important;
+  background-color: #f7f7f7 !important;
+  padding-left: 30px !important;
+  position: relative !important;
+  border-top: 1px solid transparent !important;
+  min-height: 100vh !important;
 }
 .cssd-App-sidebar {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   font-size: 14px !important;
   color: #333 !important;
-  float: left;
-  width: 20%;
-  max-width: 400px;
-}
-.cssd-App-sidebar > ul {
-  margin-right: 20px !important;
-}
-.cssd-App-sidebar > ul > li > span,
-.cssd-App-sidebar > ul > li > a {
-  font-size: 16px;
-  font-weight: bold;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 100% !important;
+  width: 20% !important;
+  max-width: 400px !important;
+  background-color: #3e4752 !important;
 }
 .cssd-App-sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.cssd-App-sidebar ul ul {
-  margin-left: 16px;
-  border-left: 1px solid #ddd;
+  list-style: none !important;
 }
 .cssd-App-sidebar ul a,
 .cssd-App-sidebar ul span {
-  display: block;
-  padding: 10px 16px;
-  color: #3498db;
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: rgba(255,255,255,0.5) !important;
+  display: block !important;
+  padding-top: 8px !important;
+  padding-left: 16px !important;
+  margin-bottom: 10px !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+  font-weight: 600 !important;
 }
-.cssd-App-sidebar ul .js-isActive > a {
-  background-color: #ddd;
-  color: #777;
-  text-decoration: none;
+.cssd-App-sidebar ul a:hover {
+  color: rgba(255,255,255,0.8) !important;
 }
-.cssd-App-content {
-  display: block;
-  margin-left: 20%;
+.cssd-App-sidebar ul ul {
+  position: relative !important;
+  margin-left: 16px !important;
+  border-left: 1px solid rgba(255,255,255,0.5) !important;
+}
+.cssd-App-sidebar ul ul:after {
+  content: '' !important;
+  width: 6px !important;
+  height: 6px !important;
+  border-top: 1px solid rgba(255,255,255,0.5) !important;
+  position: absolute !important;
+  left: -1px !important;
+  bottom: 0 !important;
+  background: #3e4752 !important;
+}
+.cssd-App-sidebar ul ul:last-child:after {
+  border-top: none !important;
+}
+.cssd-App-sidebar ul ul li a {
+  position: relative !important;
+}
+.cssd-App-sidebar ul ul li a:after {
+  content: '' !important;
+  width: 6px !important;
+  height: 6px !important;
+  border-top: 1px solid rgba(255,255,255,0.5) !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  background: #3e4752 !important;
+}
+.cssd-App-sidebar > ul {
+  margin: 20px 20px 0 6px !important;
+}
+.cssd-App-sidebar > ul > li {
+  margin-bottom: 30px !important;
+}
+.cssd-App-sidebar > ul > li > a,
+.cssd-App-sidebar > ul > li > span {
+  text-transform: uppercase !important;
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 13px !important;
+  color: #fff !important;
+  padding-bottom: 8px !important;
+}
+.cssd-App-sidebar .js-isActive > a,
+.cssd-App-sidebar .js-isActive > a:hover {
+  color: #fff !important;
+  cursor: default !important;
 }
 .cssd-Breadcrumbs {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  font-size: 16px !important;
+  position: absolute !important;
+  top: -1px !important;
+  left: 0 !important;
+  width: 100% !important;
+  background-color: #fff !important;
+  padding-left: 0px !important;
+}
+.cssd-Breadcrumbs .cssd-separator {
+  display: none !important;
+}
+.cssd-Breadcrumbs a,
+.cssd-Breadcrumbs span {
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 13px !important;
   color: #333 !important;
+  padding: 12px 30px !important;
+  line-height: 1.1 !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  border-right: 1px solid #e4e4e4 !important;
+  border-top-right-radius: 70px !important;
+  border-bottom-right-radius: 70px !important;
+  box-shadow: 5px 0 10px rgba(50,58,68,0.1) !important;
+  color: #3e4752 !important;
+  opacity: 0.6 !important;
+}
+.cssd-Breadcrumbs a:hover {
+  opacity: 1 !important;
 }
 .cssd-Doc {
-  padding-bottom: 40vh;
+  margin-top: 80px !important;
+  margin-right: 40px !important;
+  margin-left: 10px !important;
+  padding: 40px 40px 40vh !important;
+  background-color: #fff !important;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
 }
 .cssd-DocBlock {
-  margin-right: 20px;
-  position: relative;
+  position: relative !important;
 }
 .cssd-DocBlock-cssLink {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   font-size: 12px !important;
   color: #333 !important;
-  position: absolute;
-  right: 0;
-  top: 0;
+  color: #4a90e2 !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+.cssd-DocBlock-cssLink + .cssd-DocBlock-depends,
+.cssd-DocBlock-cssLink + .cssd-DocBlock-extends {
+  margin-top: -14px !important;
 }
 .cssd-DocBlock-title {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  font-size: 22px !important;
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 28px !important;
   color: #333 !important;
-  margin: 32px 0 20px !important;
+  margin: 0 0 20px !important;
 }
 .cssd-DocBlock-subtitle {
-  margin: 1.8em 0 1.2em !important;
+  margin: 2.8em 0 1.2em !important;
+  text-transform: uppercase !important;
 }
-h3.cssd-DocBlock-subtitle {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  font-size: 22px !important;
-  color: #333 !important;
-}
+h3.cssd-DocBlock-subtitle,
 h4.cssd-DocBlock-subtitle {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  font-size: 18px !important;
-  color: #333 !important;
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 15px !important;
+  color: #323a44 !important;
 }
 h5.cssd-DocBlock-subtitle {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  font-size: 16px !important;
-  color: #333 !important;
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: #323a44 !important;
 }
 .cssd-DocBlock-description {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   font-size: 16px !important;
   color: #333 !important;
-  margin-top: 40px;
+  margin-top: 40 p !important;
+  max-width: 44em !important;
+}
+.cssd-DocBlock-description > p,
+.cssd-DocBlock-description > pre,
+.cssd-DocBlock-description > ul,
+.cssd-DocBlock-description > ol {
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  color: #333 !important;
+  margin-top: 20px !important;
+}
+.cssd-DocBlock-description > p:first-child,
+.cssd-DocBlock-description > pre:first-child,
+.cssd-DocBlock-description > ul:first-child,
+.cssd-DocBlock-description > ol:first-child {
+  margin-top: 0 !important;
+}
+.cssd-DocBlock-description > ul,
+.cssd-DocBlock-description > ol {
+  margin-left: 18px !important;
+}
+.cssd-DocBlock-description li {
+  margin-bottom: 6px !important;
 }
 .cssd-DocBlock-states,
 .cssd-DocBlock-modifier {
-  list-style: none;
+  list-style: none !important;
+}
+.cssd-DocBlock-states > li,
+.cssd-DocBlock-modifier > li {
+  margin-bottom: 30px !important;
 }
 .cssd-DocBlock-depends,
 .cssd-DocBlock-extends {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   font-size: 14px !important;
-  color: #333 !important;
-  list-style: none;
-  margin-bottom: 6px;
+  color: #999da2 !important;
+  list-style: none !important;
+  margin-bottom: 3px !important;
+}
+.cssd-DocBlock-depends > strong,
+.cssd-DocBlock-extends > strong {
+  font-weight: 600 !important;
+  margin-right: 8px !important;
 }
 .cssd-DocBlock-depends strong,
 .cssd-DocBlock-extends strong,
@@ -134,27 +351,67 @@ h5.cssd-DocBlock-subtitle {
 .cssd-DocBlock-extends ul,
 .cssd-DocBlock-depends li,
 .cssd-DocBlock-extends li {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-block !important;
+  vertical-align: baseline !important;
 }
-.cssd-DocBlock-render {
-  padding: 20px !important;
+.cssd-DocBlock-depends ul li a,
+.cssd-DocBlock-extends ul li a {
+  color: #4a90e2 !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  marign-right: 10px !important;
 }
 .cssd-DocBlock .hljs,
 .cssd-DocBlock-markup .hljs {
-  font-size: 14px;
+  font-size: 14px !important;
+  background-color: #fff !important;
 }
 .cssd-DocBlock .hljs,
 .cssd-DocBlock-markup .hljs,
 .cssd-DocBlock code,
 .cssd-DocBlock-markup code {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace !important;
+  font-size: 14px !important;
 }
 .cssd-DocBlock-description > .hljs,
 .cssd-DocBlock-markup > .hljs {
-  width: 100%;
-  display: block;
+  width: 100% !important;
+  display: block !important;
+}
+.cssd-DocBlock-render,
+.cssd-DocBlock-markup {
+  border: 1px dashed #cecece !important;
+  padding: 20px !important;
+  border-radius: 5px !important;
+}
+.cssd-DocBlock-render-header {
+  border: 1px dashed #cecece !important;
+  padding: 10px 20px !important;
+  border-top-right-radius: 4px !important;
+  border-top-left-radius: 4px !important;
+  overflow: hidden !important;
+}
+.cssd-DocBlock-render-header > code {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace !important;
+  font-size: 15px !important;
+  float: left !important;
+  width: 200px !important;
+  color: #444 !important;
+  font-weight: bold !important;
+  margin-top: 3px !important;
+}
+.cssd-DocBlock-render-header > p {
+  font-family: 'Avenir Next', Avenir, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  color: #999da2 !important;
+  display: block !important;
+  margin-left: 220px !important;
+}
+.cssd-DocBlock-render-header + .cssd-DocBlock-render {
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top: none !important;
 }
