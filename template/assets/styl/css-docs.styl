@@ -60,13 +60,19 @@ body
 
 .cssd-App-sidebar
     default-style(14px)
-    position: absolute
-    top: 0
-    left: 0
+    float: left
     height: 100%
     width: 20%
     max-width: 400px
     background-color: #3E4752
+
+    &:after
+        content: ''
+        width: 100%
+        height: 1000%
+        position: absolute
+        background-color: #3E4752
+
 
     ul
         list-style: none
@@ -102,7 +108,8 @@ body
             &:last-child:after
                 border-top: none;
 
-            li a
+            li a,
+            li span
                 position: relative
 
                 &:after
@@ -211,7 +218,7 @@ h5.cssd-DocBlock-subtitle
 
 .cssd-DocBlock-description
     default-style()
-    margin-top: 40p;
+    margin-top: 40px
     max-width: 44em
 
     > p, > pre, > ul, > ol
